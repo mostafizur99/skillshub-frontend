@@ -1,5 +1,5 @@
 "use client";
-import PageLoader from "@/components/ui/Loader";
+import { PageLoader } from "@/components/ui/Loader";
 import { isLoggedIn } from "@/services/auth.service";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
