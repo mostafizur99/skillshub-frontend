@@ -13,6 +13,9 @@ module.exports = {
       colors: {
         themePrimary: "#3f3a64",
         themeSecondary: "#20ad96",
+        themeGray: "#385777",
+        themeDarker: "#495057",
+        themeLight: "#e8e8e8",
       },
     },
   },

@@ -2,7 +2,9 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Providers from "@/lib/Providers";
-
+import MainNav from "@/components/ui/nav/MainNav";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -18,7 +20,11 @@ export default function RootLayout({
   return (
     <Providers>
       <html lang="en">
-        <body>{children}</body>
+        <body>
+          <MainNav />
+          {children}
+          <ToastContainer />
+        </body>
       </html>
     </Providers>
   );

@@ -47,7 +47,14 @@ const MainNav = () => {
                   Services
                 </Link>
               </li>
-
+              <li>
+                <Link
+                  href="/profile"
+                  className="text-white hover:text-themeSecondary hover:bg-themeSecondary/5 ase-in duration-300 px-4 py-2 rounded-md"
+                >
+                  Dashboard
+                </Link>
+              </li>
               {loginSession ? (
                 <li>
                   <a
