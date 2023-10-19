@@ -1,5 +1,3 @@
-"use client";
-
 import MainNav from "@/components/ui/nav/MainNav";
 
 const HomePage = () => {
