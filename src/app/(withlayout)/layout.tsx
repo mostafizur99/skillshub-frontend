@@ -1,8 +1,11 @@
 "use client";
-import { PageLoader } from "@/components/ui/Loader";
-import { isLoggedIn } from "@/services/auth.service";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { PageLoader } from "@/components/ui/Loader";
+import Sidebar from "@/components/ui/Sidebar";
+import { isLoggedIn } from "@/services/auth.service";
+
+import { Fragment } from "react";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   const userLoggedIn = isLoggedIn();
@@ -22,9 +25,20 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div>
-      <h2>SideBar</h2>
-      <h2>Contents</h2>
-      {children}
+      <Fragment>
+        <div className="px-0">
+          <div className="bg-gray-300 w-full min-h-screen max-h-full">
+            <div className="flex">
+              <div className="w-2/12">
+                <Sidebar />
+              </div>
+              <div className="w-10/12">
+                <div className="p-10">{children}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Fragment>
     </div>
   );
 };

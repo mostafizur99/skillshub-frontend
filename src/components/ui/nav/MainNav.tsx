@@ -2,12 +2,17 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import MobileMenu from "./MobileMenu";
+import { isLoggedIn, removeUserInfo } from "@/services/auth.service";
+import { authKey } from "@/constants/storageKey";
 
 const MainNav = () => {
-  const loginSession = false;
-  const signOut = () => {
-    console.log("sign out");
+  const userLoggedIn = isLoggedIn();
+  const router = useRouter();
+
+  const logOut = () => {
+    removeUserInfo(authKey);
   };
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -55,14 +60,12 @@ const MainNav = () => {
                   Dashboard
                 </Link>
               </li>
-              {loginSession ? (
-                <li>
-                  <a
-                    className="px-4 py-2 font-medium text-themePrimary bg-themeSecondary ase-in duration-300 rounded-md cursor-pointer"
-                    onClick={() => signOut()}
-                  >
-                    Logout
-                  </a>
+              {userLoggedIn ? (
+                <li
+                  onClick={logOut}
+                  className="px-4 py-2 font-medium text-white bg-red-500 ase-in duration-300 rounded-md cursor-pointer"
+                >
+                  Logout
                 </li>
               ) : (
                 <li>

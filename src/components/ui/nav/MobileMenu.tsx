@@ -1,14 +1,17 @@
 import { useState } from "react";
 import Link from "next/link";
+import { isLoggedIn, removeUserInfo } from "@/services/auth.service";
+import { authKey } from "@/constants/storageKey";
 
 interface MobileMenuProps {
   isMenuOpen: boolean;
 }
 
 const MobileMenu = ({ isMenuOpen }: MobileMenuProps) => {
-  const loginSession = false;
+  const userLoggedIn = isLoggedIn();
+
   const signOut = () => {
-    console.log("sign out");
+    removeUserInfo(authKey);
   };
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -34,10 +37,18 @@ const MobileMenu = ({ isMenuOpen }: MobileMenuProps) => {
             Services
           </Link>
         </li>
-        {loginSession ? (
+        <li>
+          <Link
+            href="/profile"
+            className="block px-3 py-2 rounded-md text-white hover:text-themeSecondary hover:bg-themeSecondary/5 ase-in duration-300"
+          >
+            Dashboard
+          </Link>
+        </li>
+        {userLoggedIn ? (
           <li>
             <a
-              className="block text-center px-3 py-2 font-medium text-themePrimary bg-themeSecondary ase-in duration-300 rounded-md cursor-pointer"
+              className="block text-center px-3 py-2 font-medium bg-red-500 text-white ase-in duration-300 rounded-md cursor-pointer"
               onClick={() => signOut()}
             >
               Logout
