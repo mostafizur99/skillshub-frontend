@@ -8,7 +8,7 @@ const Service = () => {
   const ServiceData = data?.data || [];
 
   return (
-    <div className="container mx-auto pt-14 pb-20 px-5 md:px-0">
+    <div className="container mx-auto  py-20 md:py-24  px-5 md:px-0">
       <div className="text-center mb-14">
         <p className="text-themeSecondary font-bold text-sm leading-none mb-4 uppercase tracking-widest">
           Trending Courses
@@ -23,7 +23,7 @@ const Service = () => {
       </div>
 
       {data && ServiceData?.length > 0 && (
-        <div className="grid gap-6 xl:gap-8 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+        <div className="grid gap-5 xl:gap-8 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
           {ServiceData.slice(0, 4).map((item: any, index: number) => (
             <div key={index}>
               <ServiceCard data={item} />

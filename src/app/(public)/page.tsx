@@ -1,5 +1,6 @@
 import ProductSummary from "@/components/Sections/ServiceSummary";
 import UpcomingServices from "@/components/Sections/UpcomingServices";
+import WhyUsSection from "@/components/Sections/WhyUsSection";
 import Banner from "@/components/ui/Banner";
 import { Metadata } from "next";
 
@@ -12,6 +13,7 @@ const HomePage = () => {
     <>
       <Banner />
       <ProductSummary />
+      <WhyUsSection />
       <UpcomingServices />
     </>
   );
