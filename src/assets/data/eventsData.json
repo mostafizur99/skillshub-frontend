@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Best Team Output",
+    "date": "December 1, 2023",
+    "time": "10:00 AM",
+    "thumb": "/images/events/events-1.jpg"
+  },
+  {
+    "title": "Grow Personal Skill",
+    "date": "December 15, 2023",
+    "time": "3:00 PM",
+    "thumb": "/images/events/events-2.jpg"
+  },
+
+  {
+    "title": "Recent Business Analysis",
+    "date": "December 22, 2023",
+    "time": "10:00 AM",
+    "thumb": "/images/events/events-3.jpg"
+  }
+]

@@ -1,3 +1,4 @@
+import EventSection from "@/components/Sections/EventSection";
 import ProductSummary from "@/components/Sections/ServiceSummary";
 import UpcomingServices from "@/components/Sections/UpcomingServices";
 import WhyUsSection from "@/components/Sections/WhyUsSection";
@@ -14,6 +15,7 @@ const HomePage = () => {
       <Banner />
       <ProductSummary />
       <WhyUsSection />
+      <EventSection />
       <UpcomingServices />
     </>
   );
