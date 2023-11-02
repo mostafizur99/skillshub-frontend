@@ -4,6 +4,7 @@ import { FaPhoneSquare } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import quickLink from "@/assets/data/menu/footerQuickLink.json";
 import learnMore from "@/assets/data/menu/footerLearnMore.json";
+import SiteLogo from "./SiteLogo";
 
 const Footer = () => {
   const FullYear = new Date().getFullYear();
@@ -16,13 +17,8 @@ const Footer = () => {
           <div className="md:grid gap-8 md:grid-cols-12 pt-16 pb-14">
             {/* about-address  */}
             <div className="xl:col-span-4 lg:col-span-4 md:col-span-12 mb-10 xl:mb-0 xl:pr-10">
-              <h3 className=" mb-8 leading-4">
-                <Link
-                  href={"/"}
-                  className="text-white font-bold text-lg italic"
-                >
-                  <span className="text-themeSecondary">Skills</span>Hub
-                </Link>
+              <h3 className=" mb-8">
+                <SiteLogo />
               </h3>
 
               <p

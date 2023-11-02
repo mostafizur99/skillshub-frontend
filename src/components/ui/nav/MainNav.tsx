@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import MobileMenu from "./MobileMenu";
 import { isLoggedIn, removeUserInfo } from "@/services/auth.service";
 import { authKey } from "@/constants/storageKey";
+import SiteLogo from "../SiteLogo";
 
 const MainNav = () => {
   const userLoggedIn = isLoggedIn();
@@ -28,9 +29,7 @@ const MainNav = () => {
           {/* site logo  */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <Link href={"/"} className="text-white font-bold text-lg  italic">
-                <span className="text-themeSecondary">Skills</span>Hub
-              </Link>
+              <SiteLogo />
             </div>
           </div>
           {/* desktop nav  */}
