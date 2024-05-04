@@ -16,7 +16,7 @@ const Banner = () => {
           We Provide the Best Learning Frame for You!
         </p>
         <Link
-          href={"/pc-builder"}
+          href={"/services"}
           className="px-6 py-3 bg-themeSecondary font-semibold rounded hover:bg-themeGray ase-in duration-300 uppercase tracking-wide"
         >
           Courses
