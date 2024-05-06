@@ -60,11 +60,13 @@ const MainNav = () => {
                 </Link>
               </li>
               {userLoggedIn ? (
-                <li
-                  onClick={logOut}
-                  className="px-4 py-2 font-medium text-white bg-red-500 ase-in duration-300 rounded-md cursor-pointer"
-                >
-                  Logout
+                <li>
+                  <a
+                    onClick={logOut}
+                    className="px-4 py-2 font-medium text-white bg-red-500 ase-in duration-300 rounded-md cursor-pointer"
+                  >
+                    Logout
+                  </a>
                 </li>
               ) : (
                 <li>
